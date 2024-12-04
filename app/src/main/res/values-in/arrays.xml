@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location_modes_entries">
+        <item>Akses lokasi standar</item>
+        <item>GPS dimatikan saat layar mati</item>
+        <item>Semua dimatikan saat layar mati</item>
+        <item>Hanya pembaruan lokasi latar-depan</item>
+        <item>Batasi saat layar mati</item>
+    </string-array>
+</resources>
