@@ -1,0 +1,5 @@
+- Update chinese
+- Add indonesian
+- Add monochrome icon
+- Target SDK 35
+- Bump dependencies
