@@ -3,16 +3,19 @@
 
     <string name="title_permission">權限</string>
 
-    <string name="permission_message">我們需要特別權限才能繼續。請使用 ADB 執行以下指令（單行）：</string>
-    <string name="please_wait">等待權限中</string>
+    <string name="permission_message">我們需要一個特殊的權限才能繼續。請使用 ADB 執行以下指令（單行）：</string>
+
+    <string name="please_wait">請稍候，等待權限授予</string>
     <string name="copied">已複製到剪貼簿</string>
 
-    <string name="snackbar_intent_failed">無法處理此動作</string>
-    <string name="snackbar_failed_to_apply">應用失敗；裝置可能不相容</string>
+    <string name="snackbar_intent_failed">無法處理此操作</string>
+    <string name="snackbar_failed_to_apply">應用失敗；可能因設備不相容</string>
     <string name="snackbar_low_power">更改將在裝置進入省電模式時生效</string>
-    <string name="snackbar_applied">設定檔已成功套用</string>
-    <string name="snackbar_reset">設定檔已成功重置</string>
-    <string name="export_share_title">省電模式常數</string>
+    <string name="snackbar_applied">成功套用設定檔</string>
+    <string name="snackbar_reset">成功重設設定檔</string>
+
+
+    <string name="export_share_title">電量調節器常數</string>
 
     <string name="category_profiles">設定檔</string>
     <string name="category_share">分享</string>
@@ -23,81 +26,80 @@
     <string name="pref_profile_summary_default">使用裝置的預設省電模式設定</string>
 
     <string name="pref_profile_title_light">輕度</string>
-    <string name="pref_profile_summary_light">僅微幅節省電量，幾乎不影響使用者體驗</string>
+    <string name="pref_profile_summary_light">對使用者體驗影響甚微的電量節約</string>
 
     <string name="pref_profile_title_moderate">中度</string>
-    <string name="pref_profile_summary_moderate">平衡的調整，既節省電量又不影響效能</string>
+    <string name="pref_profile_summary_moderate">在節省電量與保持性能之間的平衡調整</string>
 
     <string name="pref_profile_title_high">高度</string>
-    <string name="pref_profile_summary_high">積極降低電量消耗，但會顯著影響效能</string>
+    <string name="pref_profile_summary_high">顯著降低耗電量，但伴隨明顯的性能損失</string>
 
     <string name="pref_profile_title_extreme">極限</string>
-    <string name="pref_profile_summary_extreme">最終調整以儘可能節省電量</string>
->
+    <string name="pref_profile_summary_extreme">極致的調整，最大限度地節省電量</string>
+
     <string name="pref_title_export">匯出</string>
-    <string name="pref_summary_export">分享省電模式常數到其他地方</string>
+    <string name="pref_summary_export">將電量調節器常數分享到其他地方</string>
 
     <string name="pref_title_import">匯入</string>
-    <string name="pref_summary_import">使用新設定檔進行設定</string>
+    <string name="pref_summary_import">使用新的設定檔進行設定</string>
 
     <string name="pref_config_title_advertise_is_enabled">廣播省電模式</string>
-    <string name="pref_config_summary_advertise_is_enabled">通知應用程式裝置處於低電量模式；某些應用程式會利用此信息來減少它們的電量消耗</string>
+    <string name="pref_config_summary_advertise_is_enabled">通知應用程式裝置處於低電量模式；某些應用程式會利用此資訊來降低其耗電量</string>
 
-    <string name="pref_config_title_datasaver_enabled">啟用數據節省器</string>
-    <string name="pref_config_summary_datasaver_enabled">減少在計量連接和行動數據上的數據傳輸和接收量</string>
+    <string name="pref_config_title_datasaver_enabled">啟用數據節省</string>
+    <string name="pref_config_summary_datasaver_enabled">減少計量連線和行動數據的傳輸與接收</string>
 
     <string name="pref_config_title_enable_night_mode">啟用夜間模式</string>
-    <string name="pref_config_summary_enable_night_mode">使用較深的顏色以減少 OLED 面板的電量消耗</string>
+    <string name="pref_config_summary_enable_night_mode">使用較暗的顏色以降低 OLED 面板的耗電量</string>
 
     <string name="pref_config_title_launch_boost_enabled">啟用啟動加速</string>
-    <string name="pref_config_summary_launch_boost_enabled">在開啟應用程式時加速 CPU 以縮短啟動時間</string>
+    <string name="pref_config_summary_launch_boost_enabled">加速 CPU 開啟應用程式以縮短啟動時間</string>
 
     <string name="pref_config_title_vibration_enabled">啟用振動</string>
-    <string name="pref_config_summary_vibration_enabled">允許觸摸和通知振動</string>
+    <string name="pref_config_summary_vibration_enabled">允許觸摸與通知振動</string>
 
     <string name="pref_config_title_animation_enabled">啟用動畫</string>
     <string name="pref_config_summary_animation_enabled">繼續顯示動畫</string>
 
     <string name="pref_config_title_soundtrigger_enabled">啟用聲音觸發</string>
-    <string name="pref_config_summary_soundtrigger_enabled">允許存取 SoundTrigger 硬體 API</string>
+    <string name="pref_config_summary_soundtrigger_enabled">允許使用 SoundTrigger 硬體 API</string>
 
-    <string name="pref_config_title_fullbackup_deferred">延後完整備份</string>
-    <string name="pref_config_summary_fullbackup_deferred">重新排程裝置的雲端備份</string>
+    <string name="pref_config_title_fullbackup_deferred">延遲完整備份</string>
+    <string name="pref_config_summary_fullbackup_deferred">將裝置雲端備份重新安排到稍後時間</string>
 
-    <string name="pref_config_title_keyvaluebackup_deferred">延後鍵值備份</string>
-    <string name="pref_config_summary_keyvaluebackup_deferred">重新排程應用程式設定的雲端備份</string>
+    <string name="pref_config_title_keyvaluebackup_deferred">延遲應用程式設定備份</string>
+    <string name="pref_config_summary_keyvaluebackup_deferred">將應用程式設定雲端備份重新安排到稍後時間</string>
 
     <string name="pref_config_title_firewall_enabled">啟用防火牆</string>
-    <string name="pref_config_summary_firewall_enabled">防範可能惡意的網路請求</string>
+    <string name="pref_config_summary_firewall_enabled">防止潛在惡意的網路請求</string>
 
     <string name="pref_config_title_gps_mode">定位模式</string>
-    <string name="pref_config_summary_gps_mode">在低電量模式下如何處理定位請求</string>
+    <string name="pref_config_summary_gps_mode">在省電模式下如何處理定位請求</string>
 
     <string name="pref_config_title_adjust_brightness_enabled">調整亮度</string>
     <string name="pref_config_summary_adjust_brightness_enabled">降低螢幕的最大亮度</string>
 
     <string name="pref_config_title_adjust_brightness_factor">亮度係數</string>
-    <string name="pref_config_summary_adjust_brightness_factor">按何種係數降低螢幕亮度</string>
+    <string name="pref_config_summary_adjust_brightness_factor">以何種係數降低螢幕亮度</string>
 
     <string name="pref_config_title_force_all_apps_standby">強制應用程式待機</string>
-    <string name="pref_config_summary_force_all_apps_standby">快速將背景應用程式進入睡眠狀態</string>
+    <string name="pref_config_summary_force_all_apps_standby">快速將背景應用程式進入休眠狀態</string>
 
-    <string name="pref_config_summary_force_background_check">停止閒置進程的背景服務</string>
+    <string name="pref_config_summary_force_background_check">停止閒置程序的背景服務</string>
 
-    <string name="pref_config_title_optional_sensors_enabled">啟用選用感測器</string>
-    <string name="pref_config_summary_optional_sensors_enabled">允許不必要的感測器請求（如邊緣感測器）</string>
+    <string name="pref_config_title_optional_sensors_enabled">啟用可選感應器</string>
+    <string name="pref_config_summary_optional_sensors_enabled">允許不必要的感應器請求（如邊緣感應器）</string>
 
-    <string name="pref_config_title_aod_enabled">啟用永遠顯示</string>
-    <string name="pref_config_summary_aod_enabled">在睡眠模式下顯示 AOD</string>
+    <string name="pref_config_title_aod_enabled">啟用常亮顯示</string>
+    <string name="pref_config_summary_aod_enabled">在休眠模式下顯示常亮顯示</string>
 
     <string name="pref_config_title_quick_doze_enabled">啟用快速休眠</string>
-    <string name="pref_config_summary_quick_doze_enabled">螢幕關閉後立即進入深度睡眠</string>
+    <string name="pref_config_summary_quick_doze_enabled">螢幕關閉後立即進入深度睡眠模式</string>
 
     <string name="pref_source_title">原始碼</string>
     <string name="pref_source_summary">在 Codeberg 上查看此專案</string>
 
     <string name="pref_config_title_force_background_check">強制背景檢查</string>
-    <string name="pref_config_title_restore">還原</string>
-    <string name="pref_config_summary_restore">將此設定檔重置為預設值</string>
-
+    <string name="pref_config_title_restore">恢復</string>
+    <string name="pref_config_summary_restore">將此設定檔重設為預設值</string>
 </resources>
