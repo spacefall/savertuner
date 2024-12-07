@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location_modes_entries">
+        <item>Quyền truy cập vị trí tiêu chuẩn</item>
+        <item>GPS vô hiệu hóa khi màn hình tắt</item>
+        <item>Tất cả vô hiệu hóa khi màn hình tắt</item>
+        <item>Chỉ cập nhật vị trí khi đang chạy nền</item>
+        <item>Làm nghẽn khi màn hình tắt</item>
+    </string-array>
+</resources>
