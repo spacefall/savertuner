@@ -5,5 +5,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Buoy"
+rootProject.name = "SaverTuner"
 include ':app'
