@@ -1,0 +1,5 @@
+- Add vi translation
+- Fix UI
+- Some internal optimizations
+- Add data extraction rule
+- Bump dependencies
