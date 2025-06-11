@@ -16,35 +16,33 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import com.draco.buoy.R
+import com.draco.buoy.databinding.ActivityPermissionBinding
 import com.draco.buoy.viewmodels.PermissionActivityViewModel
 import com.google.android.material.snackbar.Snackbar
 
 class PermissionActivity : AppCompatActivity() {
     private val viewModel: PermissionActivityViewModel by viewModels()
 
-    private lateinit var command: TextView
+    private lateinit var binding: ActivityPermissionBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_permission)
-
-        command = findViewById(R.id.command)
+        binding = ActivityPermissionBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val userId = UserHandle.getUserHandleForUid(this.taskId).toString().filter {
             it.isDigit()
         }
 
-        command.text = String.format(resources.getString(R.string.permission_command_with_user), userId)
-
-
+        binding.command.text = String.format(resources.getString(R.string.permission_command_with_user), userId)
 
         /* Copy ADB command to clipboard */
-        command.setOnClickListener {
+        binding.command.setOnClickListener {
             val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
-            val clip = ClipData.newPlainText("ADB Command", command.text.toString())
+            val clip = ClipData.newPlainText("ADB Command", binding.command.text.toString())
             clipboardManager.setPrimaryClip(clip)
 
-            Snackbar.make(command, R.string.copied, Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.command, R.string.copied, Snackbar.LENGTH_SHORT).show()
         }
 
         /* Once permission is granted, return */
