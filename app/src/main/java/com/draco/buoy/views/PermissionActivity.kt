@@ -5,16 +5,14 @@
  */
 package com.draco.buoy.views
 
-import android.app.ActivityManager
+import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.os.Bundle
 import android.os.UserHandle
-import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import com.draco.buoy.R
 import com.draco.buoy.databinding.ActivityPermissionBinding
 import com.draco.buoy.viewmodels.PermissionActivityViewModel
@@ -53,5 +51,6 @@ class PermissionActivity : AppCompatActivity() {
     }
 
     /* Disallow exit */
+    @SuppressLint("MissingSuperCall")
     override fun onBackPressed() {}
 }
