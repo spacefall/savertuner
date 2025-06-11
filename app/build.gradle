@@ -42,6 +42,11 @@ android {
     kotlinOptions {
         jvmTarget = '17'
     }
+    dependenciesInfo {
+        // Disables dependency metadata when building APKs and Bundles.
+        includeInApk = false
+        includeInBundle = false
+    }
     buildFeatures {
         viewBinding = true
     }
