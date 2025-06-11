@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SaverTuner</string>
+    <string name="title_permission">Quyền truy cập</string>
+    <string name="permission_message">Ứng dụng cần quyền truy cập đặc biệt để tiếp tục. Hãy sử dụng ADB để chạy lệnh sau (một dòng):</string>
+    <string name="please_wait">Đang đợi quyền truy cập</string>
+    <string name="copied">Đã sao chép vào bộ nhớ tạm</string>
+    <string name="snackbar_intent_failed">Không thể xử lý hành động này</string>
+    <string name="snackbar_failed_to_apply">Áp dụng thất bại; thiết bị có thể không được tương thích</string>
+    <string name="snackbar_low_power">Thay đổi sẽ có hiệu lực khi thiết bị đang ở chế độ tiết kiệm pin</string>
+    <string name="snackbar_applied">Đã áp dụng hồ sơ thành công</string>
+    <string name="snackbar_reset">Đã đặt lại hồ sơ thành công</string>
+    <string name="export_share_title">Cấu Hình Tiết Kiệm Pin</string>
+
+    <string name="category_profiles">Hồ sơ</string>
+    <string name="category_share">Chia sẻ</string>
+    <string name="category_about">Giới thiệu</string>
+    <string name="category_config">Cấu hình</string>
+
+    <string name="pref_profile_title_default">Mặc định</string>
+    <string name="pref_profile_summary_default">Sử dụng cài đặt tiết kiệm pin mặc định của thiết bị</string>
+
+    <string name="pref_profile_title_light">Nhẹ</string>
+    <string name="pref_profile_summary_light">"Tiết kiệm pin ở mức tối thiểu, gần như không làm ảnh hưởng đến trải nghiệm người dùng"</string>
+
+    <string name="pref_profile_title_moderate">Vừa phải</string>
+    <string name="pref_profile_summary_moderate">Các điều chỉnh cân bằng để tiết kiệm pin mà không làm ảnh hưởng đến hiệu năng</string>
+
+    <string name="pref_profile_title_high">Cao</string>
+    <string name="pref_profile_summary_high">Giảm mạnh lượng tiêu thụ pin kèm theo hiệu năng giảm một cách rõ rệt</string>
+
+    <string name="pref_profile_title_extreme">Cao nhất</string>
+    <string name="pref_profile_summary_extreme">Bộ điều chỉnh mạnh mẽ nhất để tiết kiệm pin tối đa</string>
+
+    <string name="pref_title_export">Xuất</string>
+    <string name="pref_summary_export">Chia sẻ cấu hình tiết kiệm pin ở nơi khác</string>
+
+    <string name="pref_title_import">Nhập</string>
+    <string name="pref_summary_import">Cấu hình bằng cách sử dụng hồ sơ mới</string>
+
+    <string name="pref_config_title_advertise_is_enabled">Thông báo chế độ tiết kiệm pin</string>
+    <string name="pref_config_summary_advertise_is_enabled">Thông báo các ứng dụng rằng thiết bị đang ở chế độ tiết kiệm pin; một số ứng dụng sẽ sử dụng thông tin này để giảm tiêu thụ pin</string>
+
+    <string name="pref_config_title_datasaver_enabled">Bật chế độ tiết kiệm dữ liệu</string>
+    <string name="pref_config_summary_datasaver_enabled">Giảm lượng dữ liệu gửi và nhận trên các kết nối có giới hạn và trên dữ liệu di động</string>
+
+    <string name="pref_config_title_enable_night_mode">Bật chế độ nền tối</string>
+    <string name="pref_config_summary_enable_night_mode">Sử dụng màu tối hơn để giảm tiêu thụ pin trên màn hình OLED</string>
+
+    <string name="pref_config_title_launch_boost_enabled">Kích hoạt tăng tốc khởi chạy</string>
+    <string name="pref_config_summary_launch_boost_enabled">Tăng tốc CPU khi mở ứng dụng để rút ngắn thời gian khởi động</string>
+
+    <string name="pref_config_title_vibration_enabled">Bật rung</string>
+    <string name="pref_config_summary_vibration_enabled">Cho phép rung khi chạm và thông báo</string>
+
+    <string name="pref_config_title_animation_enabled">Bật hiệu ứng</string>
+    <string name="pref_config_summary_animation_enabled">Tiếp tục hiển thị hiệu ứng</string>
+
+    <string name="pref_config_title_soundtrigger_enabled">Bật sound triggers</string>
+    <string name="pref_config_summary_soundtrigger_enabled">Cho phép truy cập vào SoundTrigger Hardware API</string>
+
+    <string name="pref_config_title_fullbackup_deferred">Hoãn sao lưu đầy đủ</string>
+    <string name="pref_config_summary_fullbackup_deferred">Dời lịch sao lưu đám mây của thiết bị sang lúc khác</string>
+
+    <string name="pref_config_title_keyvaluebackup_deferred">Hoãn sao lưu keyvalue</string>
+    <string name="pref_config_summary_keyvaluebackup_deferred">Dời lịch sao lưu cài đặt ứng dụng lên đám mây sang lúc khác</string>
+
+    <string name="pref_config_title_firewall_enabled">Bật tường lửa</string>
+    <string name="pref_config_summary_firewall_enabled">Bảo vệ khỏi các mối đe dọa web độc hại</string>
+
+    <string name="pref_config_title_gps_mode">Chế độ vị trí</string>
+    <string name="pref_config_summary_gps_mode">Cách xử lý các yêu cầu vị trí ở trong chế độ tiết kiệm pin</string>
+
+    <string name="pref_config_title_adjust_brightness_enabled">Chỉnh độ sáng</string>
+    <string name="pref_config_summary_adjust_brightness_enabled">Giảm độ sáng tối đa trên màn hình</string>
+
+    <string name="pref_config_title_adjust_brightness_factor">Tỉ lệ độ sáng</string>
+    <string name="pref_config_summary_adjust_brightness_factor">Giảm độ sáng màn hình theo tỉ lệ</string>
+
+    <string name="pref_config_title_force_all_apps_standby">Buộc ứng dụng chuyển sang chế độ chờ</string>
+    <string name="pref_config_summary_force_all_apps_standby">Các ứng dụng chạy nền sẽ đưa vào chế độ ngủ một cách nhanh chóng</string>
+
+    <string name="pref_config_summary_force_background_check">Dừng các dịch vụ nền cho các tiến trình đang treo</string>
+
+    <string name="pref_config_title_optional_sensors_enabled">Kích hoạt các cảm biến tùy chọn</string>
+    <string name="pref_config_summary_optional_sensors_enabled">Cho phép các yêu cầu cảm biến không cần thiết (Tức là cảm biến tiệm cận)</string>
+
+    <string name="pref_config_title_aod_enabled">Bật Always-on-display</string>
+    <string name="pref_config_summary_aod_enabled">Hiển thị AOD ở chế độ ngủ</string>
+
+    <string name="pref_config_title_quick_doze_enabled">Bật chế độ ngủ đông</string>
+    <string name="pref_config_summary_quick_doze_enabled">Vào chế độ ngủ đông ngay khi màn hình được tắt</string>
+
+    <string name="pref_source_title">Mã nguồn</string>
+    <string name="pref_source_summary">Xem dự án này trên Codeberg</string>
+
+    <string name="pref_config_title_force_background_check">Buộc kiểm tra nền</string>
+    <string name="pref_config_title_restore">Khôi phục</string>
+    <string name="pref_config_summary_restore">Đặt lại hồ sơ về giá trị mặc định</string>
+</resources>
