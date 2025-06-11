@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2021-2022 tytydraco
+// SPDX-FileCopyrightText: 2023-2024 s1m
+// SPDX-License-Identifier: BSD-2-Clause
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
