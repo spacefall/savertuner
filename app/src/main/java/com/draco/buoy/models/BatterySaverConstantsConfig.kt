@@ -77,10 +77,13 @@ data class BatterySaverConstantsConfig(
     }
 
     fun import(string: String) {
-        val keyValueMap = string.split(",").associate {
-            val (key, value) = it.split("=")
-            key to value
-        }
+        val keyValueMap = string.split(",")
+            .filter {
+                it.contains("=")
+            }.associate {
+                val (key, value) = it.split("=")
+                key to value
+            }
 
         for ((key, value) in keyValueMap) {
             when (key) {
