@@ -8,10 +8,10 @@ plugins {
 }
 
 android {
-    compileSdk 36
+    compileSdk = 36
 
     androidResources {
-        generateLocaleConfig true
+        generateLocaleConfig = true
     }
 
     defaultConfig {
@@ -27,10 +27,10 @@ android {
     buildTypes {
         release {
             postprocessing {
-                removeUnusedCode true
-                removeUnusedResources true
-                obfuscate false
-                optimizeCode true
+                removeUnusedCode = true
+                removeUnusedResources = true
+                obfuscate = false
+                optimizeCode = true
             }
         }
     }
@@ -49,10 +49,10 @@ android {
     }
     buildFeatures {
         viewBinding = true
-        buildConfig true
+        buildConfig = true
     }
 
-    namespace 'com.draco.buoy'
+    namespace = 'com.draco.buoy'
     lint {
         disable 'MissingTranslation'
         baseline = file("lint-baseline.xml")
@@ -74,11 +74,11 @@ android {
 }
 
 dependencies {
-    ext.ktx = "2.9.1"
+    ext.ktx = "2.10.0"
 
     implementation 'androidx.core:core-ktx:1.17.0'
     implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'com.google.android.material:material:1.13.0'
 
     implementation 'androidx.preference:preference-ktx:1.2.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2'
