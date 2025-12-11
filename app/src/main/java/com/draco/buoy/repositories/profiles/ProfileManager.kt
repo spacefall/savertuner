@@ -9,6 +9,7 @@ import android.content.Context
 import androidx.preference.PreferenceManager
 import com.draco.buoy.models.BatterySaverConstantsConfig
 import com.draco.buoy.utils.BatterySaverManager
+import androidx.core.content.edit
 
 enum class Profile {
     LIGHT,
@@ -31,11 +32,11 @@ class ProfileManager(context: Context) {
     }
 
     private fun setPref(key: String, value: BatterySaverConstantsConfig?) {
-        prefs.edit().apply{
+        prefs.edit {
             value?.let {
                 putString(key, value.toString())
             } ?: remove(key)
-        }.apply()
+        }
     }
 
     private var light: BatterySaverConstantsConfig?
@@ -57,7 +58,7 @@ class ProfileManager(context: Context) {
     var current: Profile
         get() = prefs.getString(CURRENT_PROFILE, null)?.let { Profile.valueOf(it) } ?: Profile.DEFAULT
         set(value) {
-            prefs.edit().putString(CURRENT_PROFILE, value.toString()).apply()
+            prefs.edit { putString(CURRENT_PROFILE, value.toString()) }
             batterySaverManager.apply(
                 when (value) {
                     Profile.LIGHT -> light!!

@@ -17,6 +17,7 @@ import com.draco.buoy.repositories.profiles.Profile
 import com.draco.buoy.repositories.profiles.ProfileManager
 import com.draco.buoy.utils.BatterySaverManager
 import com.google.android.material.snackbar.Snackbar
+import androidx.core.net.toUri
 
 class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var batterySaverManager: BatterySaverManager
@@ -291,7 +292,7 @@ class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
      * Open a URL for the user
      */
     private fun openURL(url: String) {
-        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        val intent = Intent(Intent.ACTION_VIEW, url.toUri())
         try {
             startActivity(intent)
         } catch (e: Exception) {
