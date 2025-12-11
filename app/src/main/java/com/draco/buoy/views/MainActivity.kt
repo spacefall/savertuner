@@ -27,19 +27,34 @@ class MainActivity : AppCompatActivity() {
         WindowCompat.enableEdgeToEdge(window)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setSupportActionBar(findViewById(R.id.topAppBar))
         preferences = binding.preferences
 
-        // TODO: make nicer bottom
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+        // Apply padding on preferences
+        ViewCompat.setOnApplyWindowInsetsListener(preferences) { v, insets ->
             val bars = insets.getInsets(
                 WindowInsetsCompat.Type.systemBars()
                         or WindowInsetsCompat.Type.displayCutout()
             )
             v.updatePadding(
+                bottom = bars.bottom,
                 left = bars.left,
-                top = bars.top,
                 right = bars.right,
-                //bottom = bars.bottom,
+            )
+            WindowInsetsCompat.CONSUMED
+        }
+
+        // Apply padding on appbar
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.topAppBarLayout)) { v, insets ->
+            val bars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars()
+                        or WindowInsetsCompat.Type.displayCutout()
+            )
+            v.updatePadding(
+                top = bars.top,
+                left = bars.left,
+                right = bars.right,
             )
             WindowInsetsCompat.CONSUMED
         }
