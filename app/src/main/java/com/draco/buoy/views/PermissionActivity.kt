@@ -5,7 +5,6 @@
  */
 package com.draco.buoy.views
 
-import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
@@ -57,7 +56,7 @@ class PermissionActivity : AppCompatActivity() {
 
         /* Copy ADB command to clipboard */
         binding.command.setOnClickListener {
-            val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clipboardManager = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
             val clip = ClipData.newPlainText("ADB Command", binding.command.text.toString())
             clipboardManager.setPrimaryClip(clip)
 

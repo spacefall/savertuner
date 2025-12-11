@@ -5,19 +5,25 @@
  */
 package com.draco.buoy.fragments
 
-import android.content.*
-import android.net.Uri
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import androidx.preference.*
+import androidx.core.net.toUri
+import androidx.preference.EditTextPreference
+import androidx.preference.ListPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
+import androidx.preference.SeekBarPreference
+import androidx.preference.SwitchPreference
 import com.draco.buoy.R
 import com.draco.buoy.models.BatterySaverConstantsConfig
 import com.draco.buoy.repositories.profiles.Profile
 import com.draco.buoy.repositories.profiles.ProfileManager
 import com.draco.buoy.utils.BatterySaverManager
 import com.google.android.material.snackbar.Snackbar
-import androidx.core.net.toUri
 
 class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
     private lateinit var batterySaverManager: BatterySaverManager
