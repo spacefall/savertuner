@@ -13,6 +13,10 @@ import android.os.Bundle
 import android.os.UserHandle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updatePadding
 import com.draco.buoy.R
 import com.draco.buoy.databinding.ActivityPermissionBinding
 import com.draco.buoy.viewmodels.PermissionActivityViewModel
@@ -25,8 +29,24 @@ class PermissionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        WindowCompat.enableEdgeToEdge(window)
         binding = ActivityPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        // TODO: maybe update like mainactivity
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
+            val bars = insets.getInsets(
+                WindowInsetsCompat.Type.systemBars()
+                        or WindowInsetsCompat.Type.displayCutout()
+            )
+            v.updatePadding(
+                left = bars.left,
+                top = bars.top,
+                right = bars.right,
+                bottom = bars.bottom,
+            )
+            WindowInsetsCompat.CONSUMED
+        }
+
 
         val userId = UserHandle.getUserHandleForUid(this.taskId).toString().filter {
             it.isDigit()

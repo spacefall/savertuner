@@ -4,7 +4,5 @@
         <item name="colorSecondary">@color/white</item>
         <item name="android:statusBarColor">?colorPrimary</item>
         <item name="android:navigationBarColor">?colorSurface</item>
-        <!-- Workaround until edge-to-edge is implemented -->
-        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:targetApi="35">true</item>
     </style>
 </resources>
