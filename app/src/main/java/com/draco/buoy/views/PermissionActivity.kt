@@ -11,6 +11,7 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.os.Bundle
 import android.os.UserHandle
+import androidx.activity.addCallback
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -68,9 +69,8 @@ class PermissionActivity : AppCompatActivity() {
             if (it == true)
                 finish()
         }
-    }
 
-    /* Disallow exit */
-    @SuppressLint("MissingSuperCall")
-    override fun onBackPressed() {}
+        /* Disallow exit */
+        onBackPressedDispatcher.addCallback(this) {}
+    }
 }
