@@ -9,6 +9,7 @@ import android.content.*
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.preference.*
 import com.draco.buoy.R
 import com.draco.buoy.models.BatterySaverConstantsConfig
@@ -68,9 +69,8 @@ class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
         preferenceManager.sharedPreferences?.unregisterOnSharedPreferenceChangeListener(this)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         profileDefault = findPreference(getString(R.string.pref_profile_key_default))!!
         profileLight = findPreference(getString(R.string.pref_profile_key_light))!!
         profileModerate = findPreference(getString(R.string.pref_profile_key_moderate))!!
@@ -101,10 +101,6 @@ class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
         refreshSettings()
         lockSettings()
 
-        /* Alert the user that LPM is not enabled */
-        if (!batterySaverManager.getLowPower())
-            Snackbar.make(requireView(), getString(R.string.snackbar_low_power), Snackbar.LENGTH_SHORT).show()
-
         /* On import text changed, apply the new configuration */
         findPreference<EditTextPreference>(getString(R.string.pref_key_import))?.let {
             it.setOnPreferenceChangeListener { _, newValue ->
@@ -113,6 +109,14 @@ class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
                 return@setOnPreferenceChangeListener true
             }
         }
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        /* Alert the user that LPM is not enabled */
+        if (!batterySaverManager.getLowPower())
+            Snackbar.make(requireView(), getString(R.string.snackbar_low_power), Snackbar.LENGTH_SHORT).show()
     }
 
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
