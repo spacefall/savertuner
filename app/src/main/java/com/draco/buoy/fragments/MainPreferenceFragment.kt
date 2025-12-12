@@ -17,7 +17,7 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SeekBarPreference
-import androidx.preference.SwitchPreference
+import androidx.preference.SwitchPreferenceCompat
 import com.draco.buoy.R
 import com.draco.buoy.models.BatterySaverConstantsConfig
 import com.draco.buoy.repositories.profiles.Profile
@@ -29,31 +29,31 @@ class MainPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnS
     private lateinit var batterySaverManager: BatterySaverManager
     private lateinit var profileManager: ProfileManager
 
-    private lateinit var profileDefault: SwitchPreference
-    private lateinit var profileLight: SwitchPreference
-    private lateinit var profileModerate: SwitchPreference
-    private lateinit var profileHigh: SwitchPreference
-    private lateinit var profileExtreme: SwitchPreference
+    private lateinit var profileDefault: SwitchPreferenceCompat
+    private lateinit var profileLight: SwitchPreferenceCompat
+    private lateinit var profileModerate: SwitchPreferenceCompat
+    private lateinit var profileHigh: SwitchPreferenceCompat
+    private lateinit var profileExtreme: SwitchPreferenceCompat
     private lateinit var export: Preference
     private lateinit var import: Preference
-    private lateinit var advertiseIsEnabled: SwitchPreference
-    private lateinit var dataSaverEnabled: SwitchPreference
-    private lateinit var enableNightMode: SwitchPreference
-    private lateinit var launchBoostEnabled: SwitchPreference
-    private lateinit var vibrationEnabled: SwitchPreference
-    private lateinit var animationEnabled: SwitchPreference
-    private lateinit var soundTriggerEnabled: SwitchPreference
-    private lateinit var fullBackupDeferred: SwitchPreference
-    private lateinit var keyValueBackupDeferred: SwitchPreference
-    private lateinit var fireWallEnabled: SwitchPreference
+    private lateinit var advertiseIsEnabled: SwitchPreferenceCompat
+    private lateinit var dataSaverEnabled: SwitchPreferenceCompat
+    private lateinit var enableNightMode: SwitchPreferenceCompat
+    private lateinit var launchBoostEnabled: SwitchPreferenceCompat
+    private lateinit var vibrationEnabled: SwitchPreferenceCompat
+    private lateinit var animationEnabled: SwitchPreferenceCompat
+    private lateinit var soundTriggerEnabled: SwitchPreferenceCompat
+    private lateinit var fullBackupDeferred: SwitchPreferenceCompat
+    private lateinit var keyValueBackupDeferred: SwitchPreferenceCompat
+    private lateinit var fireWallEnabled: SwitchPreferenceCompat
     private lateinit var gpsMode: ListPreference
-    private lateinit var adjustBrightnessEnabled: SwitchPreference
+    private lateinit var adjustBrightnessEnabled: SwitchPreferenceCompat
     private lateinit var adjustBrightnessFactor: SeekBarPreference
-    private lateinit var forceAllAppsStandby: SwitchPreference
-    private lateinit var forceBackgroundCheck: SwitchPreference
-    private lateinit var optionalSensorsEnabled: SwitchPreference
-    private lateinit var aodEnabled: SwitchPreference
-    private lateinit var quickDozeEnabled: SwitchPreference
+    private lateinit var forceAllAppsStandby: SwitchPreferenceCompat
+    private lateinit var forceBackgroundCheck: SwitchPreferenceCompat
+    private lateinit var optionalSensorsEnabled: SwitchPreferenceCompat
+    private lateinit var aodEnabled: SwitchPreferenceCompat
+    private lateinit var quickDozeEnabled: SwitchPreferenceCompat
     private lateinit var restore: Preference
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
